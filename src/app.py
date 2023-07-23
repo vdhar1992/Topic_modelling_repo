@@ -155,7 +155,7 @@ if __name__ == '__main__':
 
     text_column = DATASETS[selected_dataset]['column']
     texts_df = generate_texts_df(selected_dataset)
-    docs = generate_docs(texts_df, text_column, ngrams=ngrams)
+    docs = generate_docs(texts_df, text_column)
 
     with st.expander('Sample Documents'):
         sample_texts = texts_df[text_column].sample(5).values.tolist()
