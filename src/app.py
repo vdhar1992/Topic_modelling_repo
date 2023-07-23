@@ -145,12 +145,13 @@ if __name__ == '__main__':
         st.stop()
 
     model_key = st.sidebar.selectbox('Model', [None, *list(MODELS.keys())], on_change=clear_session_state)
+    
     if not model_key:
         with st.sidebar:
             st.write('Choose a Model to Continue ...')
             st.stop()
     else:
-        train_model_clicked = st.form_submit_button('Train Model')
+        train_model_clicked = st.button('Train Model')
         
     
     with st.expander('Dataset Description'):
