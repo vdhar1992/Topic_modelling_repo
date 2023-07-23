@@ -10,7 +10,7 @@ from bertopic import BERTopic
 from bertopic.representation import KeyBERTInspired
 from bertopic.vectorizers import ClassTfidfTransformer
 from wordcloud import WordCloud
-import matplotlib.colors as mc
+import matplotlib.colors as mcolors
 from utils.config import *
 from utils.preprocess import *
 
