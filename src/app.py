@@ -76,10 +76,10 @@ def generate_docs(texts_df: pd.DataFrame, text_column: str):
 
 
 @st.cache_data()
-def generate_wordcloud(docs, collocations: bool = False):
+def generate_wordcloud(docs):
     wordcloud_text = (' '.join(' '.join(doc) for doc in docs))
     wordcloud = WordCloud(font_path=WORDCLOUD_FONT_PATH, width=700, height=600,
-                          background_color='white', collocations=collocations).generate(wordcloud_text)
+                          background_color='white').generate(wordcloud_text)
     return wordcloud
 
 
@@ -248,7 +248,7 @@ if __name__ == '__main__':
             cols = st.columns(3)
             for index, topic in enumerate(topics_lda):
                 wc = WordCloud(font_path=WORDCLOUD_FONT_PATH, width=700, height=600,
-                            background_color='white', collocations=collocations, prefer_horizontal=1.0,
+                            background_color='white', prefer_horizontal=1.0,
                             color_func=lambda *args, **kwargs: colors[index])
                 with cols[index % 3]:
                     wc.generate_from_frequencies(dict(topic[1]))
@@ -270,7 +270,7 @@ if __name__ == '__main__':
             cols = st.columns(3)
             for index, topic in enumerate(st.session_state.topics):
                 wc = WordCloud(font_path=WORDCLOUD_FONT_PATH, width=700, height=600,
-                            background_color='white', collocations=collocations, prefer_horizontal=1.0,
+                            background_color='white', prefer_horizontal=1.0,
                             color_func=lambda *args, **kwargs: colors[index])
                 with cols[index % 3]:
                     wc.generate_from_frequencies(dict(topic[1]))
