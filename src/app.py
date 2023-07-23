@@ -90,7 +90,7 @@ def prepare_training_data(docs):
     return id2word, corpus
 
 @st.cache_data()
-def train_model_lda(modeldocs, base_model):
+def train_model_lda(docs, base_model):
 
     id2word, corpus = prepare_training_data(docs)
     model = base_model(corpus=corpus, id2word=id2word, num_topics=DEFAULT_NUM_TOPICS)
@@ -98,13 +98,13 @@ def train_model_lda(modeldocs, base_model):
     return id2word, corpus, model
 
 @st.cache_data()
-def train_model_bert(modeldocs, base_model):
+def train_model_bert(docs, base_model):
     ctfidf_model = ClassTfidfTransformer(reduce_frequent_words=True)
     # Create your representation model
     representation_model = KeyBERTInspired()
     # Use the representation model in BERTopic on top of the default pipeline
     model = base_model(representation_model=representation_model,ctfidf_model=ctfidf_model)
-    topics, probabilities = model.fit_transform(df)
+    topics, probabilities = model.fit_transform(docs)
 
     return model,topics,probabilities
 
