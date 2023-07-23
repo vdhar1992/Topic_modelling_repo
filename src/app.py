@@ -3,6 +3,7 @@ import gensim
 import nltk
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 import pyLDAvis.gensim_models
 from gensim import corpora
 import streamlit.components.v1 as components
