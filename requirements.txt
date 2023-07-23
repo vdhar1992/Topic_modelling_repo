@@ -15,3 +15,4 @@ bertopic[visualization]
 gensim
 wordcloud
 matplotlib 
+seaborn
