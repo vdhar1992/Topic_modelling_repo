@@ -26,7 +26,7 @@ DATASETS = {
         )
     },
     'Comcast Consumer Complaints': {
-        'path': '.data/comcast_fcc_complaints_2015.csv',
+        'path': './data/comcast_fcc_complaints_2015.csv',
         'column': 'Description',
         'url': 'https://www.kaggle.com/datasets/yasserh/comcast-telecom-complaints?select=Comcast.csv',
         'description': (
