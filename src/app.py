@@ -264,7 +264,7 @@ if __name__ == '__main__':
                     components.html(py_lda_vis_html, width=1300, height=800)
 
     else:
-
+        """
         colors = random.sample(COLORS, k=DEFAULT_NUM_TOPICS)
         with st.expander('Top N Topic Keywords Wordclouds'):
             cols = st.columns(3)
@@ -275,7 +275,7 @@ if __name__ == '__main__':
                 with cols[index % 3]:
                     wc.generate_from_frequencies(dict(topic[1]))
                     st.image(wc.to_image(), caption=f'Topic #{index}', use_column_width=True)
-        
+        """
         if st.button('Generate visualization'):
                 with st.spinner('Creating bertopic barchart ...'):
                     bertopic_vis = st.session_state.model.visualize_barchart(top_n_topics=10, height=700)
