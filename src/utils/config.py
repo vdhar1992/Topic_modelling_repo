@@ -108,5 +108,3 @@ lookup_dict = {
   "i'm" : 'i am',
   "wouldn't" : 'would not'
 }
-
-model = 'bert'

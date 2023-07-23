@@ -1,7 +1,5 @@
 import streamlit as st
-import random
 import gensim
-import matplotlib.pyplot as plt
 import nltk
 import numpy as np
 import pandas as pd
@@ -13,8 +11,8 @@ from bertopic.representation import KeyBERTInspired
 from bertopic.vectorizers import ClassTfidfTransformer
 from wordcloud import WordCloud
 import matplotlib.colors as mc
-from config import *
-from preprocess import *
+from utils.config import *
+from utils.preprocess import *
 
 DEFAULT_NUM_TOPICS = 4
 
