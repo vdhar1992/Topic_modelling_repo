@@ -148,8 +148,10 @@ if __name__ == '__main__':
     if not model_key:
         with st.sidebar:
             st.write('Choose a Model to Continue ...')
-            train_model_clicked = st.form_submit_button('Train Model')
-        st.stop()
+            st.stop()
+    else:
+        train_model_clicked = st.form_submit_button('Train Model')
+        
     
     with st.expander('Dataset Description'):
         st.markdown(DATASETS[selected_dataset]['description'])
