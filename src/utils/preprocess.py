@@ -4,7 +4,7 @@ import nltk
 import spacy
 import regex as re
 
-from config import *
+from utils.config import *
 
 def abbrev_conversion(text,lookup_dict):
 
