@@ -151,7 +151,8 @@ if __name__ == '__main__':
             st.write('Choose a Model to Continue ...')
             st.stop()
     else:
-        train_model_clicked = st.button('Train Model')
+        with st.sidebar:
+            train_model_clicked = st.button('Train Model')
         
     
     with st.expander('Dataset Description'):
