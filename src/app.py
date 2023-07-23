@@ -127,7 +127,7 @@ if __name__ == '__main__':
     st.title('Topic Modeling')
     st.header('What is topic modeling?')
     with st.expander('Hero Image'):
-        st.image('./data/topic.jpg', use_column_width=True)
+        st.image('./data/topic.png', use_column_width=True)
     st.markdown(
         'Topic modeling is a type of statistical modeling that uses unsupervised Machine Learning to identify clusters or groups of similar words within a body of text.'
         'This text mining method uses semantic structures in text to understand unstructured data without predefined tags or training data.'
