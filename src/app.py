@@ -68,7 +68,7 @@ def denoise_docs(texts_df: pd.DataFrame, text_column: str, model_key):
 
 @st.cache_data()
 def generate_docs(texts_df: pd.DataFrame, text_column: str):
-    docs = denoise_docs(texts_df, text_column)
+    docs = denoise_docs(texts_df, text_column,model_key)
     return docs
 
 
