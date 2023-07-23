@@ -1,6 +1,7 @@
 import streamlit as st
 import gensim
 import nltk
+import random
 import numpy as np
 import pandas as pd
 import seaborn as sns
