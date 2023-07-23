@@ -84,6 +84,7 @@ def generate_wordcloud(docs, collocations: bool = False):
 
 @st.cache_data()
 def prepare_training_data(docs):
+    docs = docs.str.split(" ")
     id2word = corpora.Dictionary(docs)
     corpus = [id2word.doc2bow(doc) for doc in docs]
     return id2word, corpus
