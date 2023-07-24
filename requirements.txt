@@ -1,6 +1,6 @@
 # This file may be used to create an environment using:
 
-streamlit
+streamlit==23.2.1
 torch
 transformers
 regex
